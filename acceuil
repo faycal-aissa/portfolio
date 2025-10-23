@@ -2,15 +2,14 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Fayçal AISSA - Portfolio BTS SIO SISR</title>
+    <title>Aïssa Fayçal - Portfolio BTS SIO SISR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background: linear-gradient(110deg, #3085b2 55%, #5a7cff 100%);
+            background: linear-gradient(110deg, #399db9 55%, #5a7cff 100%);
             min-height: 100vh;
             margin: 0;
-            font-family: 'Segoe UI', sans-serif;
         }
         .hero-section {
             display: flex;
@@ -38,7 +37,7 @@
             letter-spacing: 0.5px;
         }
         .hero-subtitle {
-            font-size: 1.25em;
+            font-size: 1.2em;
             color: #365ecf;
             margin-bottom: 14px;
             font-weight: 500;
@@ -112,32 +111,7 @@
             background: #3085b2;
             color: #fff;
         }
-        .navbar {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 18px;
-            padding: 14px;
-            background: rgba(255,255,255,0.9);
-            box-shadow: 0 2px 10px #26315922;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        .navbar a {
-            color: #3048b2;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .navbar a:hover, .navbar a.active {
-            color: #5a7cff;
-        }
-        footer {
-            text-align: center;
-            padding: 16px;
-            color: #fff;
-            font-weight: 500;
-        }
+        /* Animation emoji wave */
         .emoji-wave {
             display: inline-block;
             animation: wave 1.9s infinite;
@@ -172,19 +146,19 @@
     <main>
         <section class="hero-section">
             <div class="hero-card">
-                <img src="faycal.jpg" alt="Avatar Fayçal" class="hero-avatar">
+                <img src="faycal_PFP.jpg" alt="Avatar Fayçal" class="hero-avatar">
                 <div class="hero-title">
                     <span class="emoji-wave">👋</span> Bienvenue !<br>
-                    <span style="font-size:1.1em">Je suis <span style="color:#5a7cff;font-weight:900">Fayçal AISSA</span></span>
+                    <span style="font-size:1.1em">Je suis <span style="color:#5a7cff;font-weight:900">Aïssa Fayçal</span></span>
                 </div>
                 <div class="hero-subtitle">Étudiant BTS SIO SISR • Montpellier</div>
                 <div class="hero-desc">
-                    Passionné par les systèmes, réseaux et la cybersécurité, je suis actuellement en formation BTS SIO option SISR au lycée Mermoz à Montpellier.<br>
-                    Vous trouverez sur ce site un aperçu de mon parcours, de mes projets et de mes compétences dans le domaine des infrastructures informatiques.
+                    Sur ce portfolio, explore mon parcours en administration systèmes et réseaux, mes expériences en cybersécurité et mes projets de clustering et gestion de parc.<br>
+                    Passionné par l’IT et la sécurité, je recherche un stage en administration systèmes et réseaux pour approfondir mes compétences et contribuer à la digitalisation des entreprises.<br>
                 </div>
                 <div class="hero-buttons">
-                    <a href="fayçal_AISSA_CV_Stage_SISR.pdf" target="_blank" download>📄 Mon CV</a>
-                    <a href="https://www.linkedin.com/in/fayçal-aissa" target="_blank">💼 LinkedIn</a>
+                    <a href="faycal_AISSA_CV_Stage_SISR.pdf" target="_blank" download>📄 Mon CV</a>
+                    <a href="https://www.linkedin.com/in/fayal-aissa" target="_blank">💼 LinkedIn</a>
                     <a href="mailto:faycalaissa54@gmail.com">✉️ Me contacter</a>
                 </div>
             </div>
@@ -199,7 +173,8 @@
         </section>
     </main>
     <footer>
-        &copy; 2025 Fayçal AISSA | Portfolio BTS SIO SISR
+        &copy; 2025 Aïssa Fayçal | Portfolio BTS SIO SISR
     </footer>
 </body>
 </html>
+
