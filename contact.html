@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Aïssa Fayçal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: #f5f7fa;
+            font-family: Arial, sans-serif;
+        }
+        .contact-section {
+            max-width: 700px;
+            margin: 40px auto 24px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 6px 32px #26315920;
+            padding: 40px 26px 32px 26px;
+        }
+        .contact-title {
+            font-size: 2.3em;
+            color: #3048b2;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+        .contact-desc {
+            text-align: center;
+            font-size: 1.15em;
+            color: #444;
+            margin-bottom: 34px;
+        }
+        .contact-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 22px;
+            margin-bottom: 28px;
+        }
+        .contact-card {
+            background: #f0f4ff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px #3048b218;
+            padding: 20px 28px;
+            text-align: center;
+            font-size: 1.08em;
+            min-width: 210px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-card a {
+            color: #3048b2;
+            text-decoration: underline;
+            word-break: break-all;
+            font-weight: 500;
+        }
+        form.contact-form {
+            margin-top: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        form.contact-form label {
+            font-weight: 500;
+            color: #263159;
+        }
+        form.contact-form input,
+        form.contact-form textarea {
+            border: 1.5px solid #dde3f3;
+            background: #f7fafd;
+            border-radius: 7px;
+            font-size: 1em;
+            padding: 9px 11px;
+            margin-top: 2px;
+            font-family: inherit;
+            resize: none;
+        }
+        form.contact-form textarea {
+            min-height: 90px;
+        }
+        form.contact-form button {
+            margin-top: 8px;
+            background: linear-gradient(90deg, #3048b2 60%, #5a7cff 100%);
+            color: #fff;
+            border: none;
+            border-radius: 7px;
+            padding: 11px 0;
+            font-size: 1.15em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background 0.25s;
+        }
+        form.contact-form button:hover {
+            background: linear-gradient(90deg, #5a7cff 10%, #3048b2 100%);
+        }
+        @media (max-width: 600px) {
+            .contact-section {
+                padding: 16px 4vw 20px 4vw;
+            }
+            .contact-cards {
+                flex-direction: column;
+                gap: 14px;
+            }
+            .contact-card {
+                min-width: 0;
+                padding: 14px 7vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="parcours.html">Parcours</a>
+        <a href="competences.html">Compétences</a>
+        <a href="projets.html">Projets</a>
+        <a href="veille.html">Veille</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <main>
+        <section class="contact-section">
+            <div class="contact-title">📬 Contactez-moi</div>
+            <div class="contact-desc">
+                Une question, un projet ou une opportunité de stage ?<br>
+                N'hésitez pas à me contacter via le formulaire ou mes coordonnées ci-dessous !
+            </div>
+
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <span>💼 <b>LinkedIn</b></span> 
+                    <a href="https://www.linkedin.com/in/fayal-aissa" target="_blank">linkedin.com/in/fayal-aissa</a>
+                </div>
+                <div class="contact-card">
+                    <span>📧 <b>E-mail</b></span>
+                    <a href="mailto:faycalaissa54@gmail.com">faycalaissa54@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <span>📞 <b>Téléphone</b></span>
+                    <a href="tel:+33758220381">07 58 22 03 81</a>
+                </div>
+                <div class="contact-card">
+                    <span>📄 <b>CV PDF</b></span> 
+                    <a href="faycal_AISSA_CV_Stage_SISR.pdf" target="_blank" download>Télécharger mon CV</a>
+                </div>
+            </div>
+
+            <form class="contact-form" action="mailto:faycalaissa54@gmail.com" method="POST" enctype="text/plain">
+                <label for="name">Nom & prénom :</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+
+                <label for="email">Adresse e-mail :</label>
+                <input type="email" id="email" name="email" placeholder="exemple@email.com" required>
+
+                <label for="message">Votre message :</label>
+                <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
+
+                <button type="submit">Envoyer ✉️</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Aïssa Fayçal | Portfolio BTS SIO SISR - 202 rue Louis Roussel, 34070 Montpellier
+    </footer>
+</body>
+</html>
