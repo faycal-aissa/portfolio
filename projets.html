@@ -10,6 +10,8 @@
             background: linear-gradient(110deg, #3048b2 55%, #5a7cff 100%);
             min-height: 100vh;
             margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: #263159;
         }
         .container-projets {
             max-width: 850px;
@@ -41,82 +43,4 @@
             border-radius: 15px;
             box-shadow: 0 2px 10px #26315915;
             padding: 23px 19px 18px 19px;
-            margin-bottom: 6px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .project-card h2 {
-            color: #365ecf;
-            font-size: 1.22em;
-            margin-bottom: 11px;
-            text-align: center;
-        }
-        .project-card p {
-            font-size: 1em;
-            color: #444;
-            margin-bottom: 12px;
-            text-align: center;
-        }
-        @media (max-width: 600px) {
-            .container-projets { padding: 15px 2vw; }
-        }
-    </style>
-</head>
-<body>
-    <nav class="navbar">
-        <a href="index.html">Accueil</a>
-        <a href="a-propos.html">À propos</a>
-        <a href="parcours.html">Parcours</a>
-        <a href="competences.html">Compétences</a>
-        <a href="projets.html" class="active">Projets</a>
-        <a href="veille.html">Veille</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <main>
-        <section class="container-projets">
-            <h1>🛠️ Mes Projets</h1>
-            <div class="subtitle">
-                Voici un aperçu de mes principaux projets réalisés dans le cadre de mon BTS SIO SISR.
-            </div>
-            <div class="project-card">
-                 <h2>📄 Projet Révision BTS SIO</h2>
-                 <p>Voici un projet complet que j’ai réalisé en BTS SIO SISR, détaillant les étapes et les résultats obtenus.</p>
-                    <a href="PROJET%20REV.pdf" download class="btn">Télécharger le PDF du projet</a>
-            </div>
-
-            <div class="project-list">
-                <div class="project-card">
-                    <h2>💡 Déploiement d'un Active Directory sous GNS3</h2>
-                    <p>
-                        Installation et configuration d'un contrôleur de domaine Windows Server, gestion des utilisateurs et des permissions NTFS.<br>
-                        Mise en place de stratégies GPO pour le mappage des lecteurs réseau et le déploiement d'applications.<br>
-                        Configuration du DNS et tests d'authentification des postes clients.<br>
-                        <em>Outils : Windows Server, Active Directory, GPO, DNS, GNS3</em>
-                    </p>
-                </div>
-                <div class="project-card">
-                    <h2>🌐 Infrastructure web haute disponibilité sous Linux</h2>
-                    <p>
-                        Déploiement d'un cluster Apache avec Pacemaker/Corosync et répartition de charge redondante via HAProxy VIP.<br>
-                        Configuration de la supervision, du DNS interne et des tests de basculement.<br>
-                        <em>Outils : Linux, Apache, Pacemaker, Corosync, HAProxy</em>
-                    </p>
-                </div>
-                <div class="project-card">
-                    <h2>🗂️ Gestion de parc et assistance informatique</h2>
-                    <p>
-                        Évaluation et comparaison de logiciels de gestion de parc (OCS Inventory, GLPI) et d'incidents (GLPI, osTicket).<br>
-                        Mise en place d'un inventaire automatisé des équipements et d'un suivi des incidents pour les entreprises clientes.<br>
-                        Rédaction d'un mode opératoire et recommandations pour l'outil le plus adapté.<br>
-                        <em>Outils : GLPI, OCS Inventory, osTicket</em>
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        &copy; 2025 Aïssa Fayçal | Portfolio BTS SIO SISR
-    </footer>
-</body>
-</html>
+            margin-bottom
