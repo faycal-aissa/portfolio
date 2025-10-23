@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Fayçal AISSA - Portfolio BTS SIO SISR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(110deg, #3085b2 55%, #5a7cff 100%);
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 83vh;
+            padding: 0 5vw;
+        }
+        .hero-card {
+            background: #fff;
+            box-shadow: 0 8px 32px #0a7c9933;
+            border-radius: 25px;
+            margin-top: 52px;
+            padding: 40px 30px 34px 30px;
+            max-width: 560px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+        .hero-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #3048b2;
+            letter-spacing: 0.5px;
+        }
+        .hero-subtitle {
+            font-size: 1.25em;
+            color: #365ecf;
+            margin-bottom: 14px;
+            font-weight: 500;
+        }
+        .hero-desc {
+            color: #444;
+            font-size: 1.1em;
+            margin: 22px 0 12px 0;
+            line-height: 1.55;
+        }
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-top: 22px;
+            flex-wrap: wrap;
+        }
+        .hero-buttons a {
+            background: linear-gradient(100deg, #32cdd8 55%, #5abdff 100%);
+            color: #fff;
+            padding: 13px 26px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.08em;
+            font-weight: bold;
+            transition: background 0.22s, transform 0.15s;
+            box-shadow: 0 2px 12px #26315922;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+        .hero-buttons a:hover {
+            background: linear-gradient(110deg, #5a7cff 0%, #3048b2 100%);
+            transform: scale(1.05);
+        }
+        .hero-avatar {
+            position: absolute;
+            left: 50%;
+            top: -58px;
+            transform: translateX(-50%);
+            width: 105px;
+            height: 105px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 2px 24px #2631592a;
+            background: #e7eaff;
+            object-fit: cover;
+            animation: popIn 1s cubic-bezier(.4,2,.6,1) 0.2s backwards;
+        }
+        @keyframes popIn {
+            from { opacity: 0; transform: translateY(-100px) scale(0.4);}
+            to   { opacity: 1; transform: translateY(0) scale(1);}
+        }
+        .section-links {
+            margin: 56px 0 8px 0;
+            text-align: center;
+        }
+        .section-links a {
+            display: inline-block;
+            color: #3048b2;
+            background: #f0f4ff;
+            padding: 10px 22px;
+            border-radius: 7px;
+            margin: 7px 10px;
+            font-weight: 500;
+            text-decoration: none;
+            box-shadow: 0 2px 8px #26315918;
+            transition: background 0.15s, color 0.12s;
+        }
+        .section-links a:hover {
+            background: #3085b2;
+            color: #fff;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            padding: 14px;
+            background: rgba(255,255,255,0.9);
+            box-shadow: 0 2px 10px #26315922;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .navbar a {
+            color: #3048b2;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .navbar a:hover, .navbar a.active {
+            color: #5a7cff;
+        }
+        footer {
+            text-align: center;
+            padding: 16px;
+            color: #fff;
+            font-weight: 500;
+        }
+        .emoji-wave {
+            display: inline-block;
+            animation: wave 1.9s infinite;
+            transform-origin: 70% 70%;
+        }
+        @keyframes wave {
+            0% { transform: rotate(0deg);}
+            10% { transform: rotate(12deg);}
+            20% { transform: rotate(-7deg);}
+            30% { transform: rotate(16deg);}
+            40% { transform: rotate(-6deg);}
+            50% { transform: rotate(7deg);}
+            60% { transform: rotate(-2deg);}
+            70%,100% { transform: rotate(0deg);}
+        }
+        @media (max-width: 700px) {
+            .hero-card { padding: 30px 5vw 26px 5vw; }
+            .section-links { margin-top: 36px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="active">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="parcours.html">Parcours</a>
+        <a href="competences.html">Compétences</a>
+        <a href="projets.html">Projets</a>
+        <a href="veille.html">Veille</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <main>
+        <section class="hero-section">
+            <div class="hero-card">
+                <img src="faycal.jpg" alt="Avatar Fayçal" class="hero-avatar">
+                <div class="hero-title">
+                    <span class="emoji-wave">👋</span> Bienvenue !<br>
+                    <span style="font-size:1.1em">Je suis <span style="color:#5a7cff;font-weight:900">Fayçal AISSA</span></span>
+                </div>
+                <div class="hero-subtitle">Étudiant BTS SIO SISR • Montpellier</div>
+                <div class="hero-desc">
+                    Passionné par les systèmes, réseaux et la cybersécurité, je suis actuellement en formation BTS SIO option SISR au lycée Mermoz à Montpellier.<br>
+                    Vous trouverez sur ce site un aperçu de mon parcours, de mes projets et de mes compétences dans le domaine des infrastructures informatiques.
+                </div>
+                <div class="hero-buttons">
+                    <a href="fayçal_AISSA_CV_Stage_SISR.pdf" target="_blank" download>📄 Mon CV</a>
+                    <a href="https://www.linkedin.com/in/fayçal-aissa" target="_blank">💼 LinkedIn</a>
+                    <a href="mailto:faycalaissa54@gmail.com">✉️ Me contacter</a>
+                </div>
+            </div>
+            <div class="section-links">
+                <a href="a-propos.html">🌟 À propos</a>
+                <a href="parcours.html">🎓 Parcours</a>
+                <a href="competences.html">💡 Compétences</a>
+                <a href="projets.html">🛠️ Projets</a>
+                <a href="veille.html">🔒 Veille</a>
+                <a href="contact.html">📬 Contact</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Fayçal AISSA | Portfolio BTS SIO SISR
+    </footer>
+</body>
+</html>
