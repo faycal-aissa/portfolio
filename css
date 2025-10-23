@@ -1,0 +1,188 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(120deg, #d4f0ff 0%, #e0f7fa 100%);
+  color: #263159;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Navbar glassmorphisme */
+.navbar {
+  background: rgba(38, 49, 89, 0.82);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid #6bb6e7;
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 18px #6bb6e710;
+  transition: background 0.4s;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.13em;
+  letter-spacing: 0.2px;
+  transition: color 0.2s, border 0.2s;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+.navbar a:hover,
+.navbar a.active {
+  color: #6bb6e7;
+  border-bottom: 2px solid #6bb6e7;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 3px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 50px auto 0 auto;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 25px;
+  box-shadow: 0 8px 32px #6bb6e71a;
+  padding: 38px 26px;
+  backdrop-filter: blur(12px);
+  animation: slideUpFade 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Apparition animée */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1,
+h2 {
+  color: #263159;
+  font-weight: bold;
+  letter-spacing: 1px;
+  animation: fadeInL 1.3s cubic-bezier(0.5, 0, 0.1, 1);
+}
+@keyframes fadeInL {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #6bb6e7, #263159 80%);
+  color: #fff;
+  padding: 11px 25px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 8px 0;
+  transition: background 0.18s, transform 0.15s;
+  box-shadow: 0 3px 16px #d4f0ff30;
+  cursor: pointer;
+  border: none;
+}
+.btn:hover {
+  background: linear-gradient(90deg, #263159 10%, #6bb6e7 90%);
+  transform: scale(1.08);
+}
+
+.skills-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 20px;
+  animation: fadeInSkills 1.3s cubic-bezier(0.5, 0, 0.2, 1) 0.4s both;
+}
+@keyframes fadeInSkills {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.skill-logo {
+  position: relative;
+  transition: box-shadow 0.22s;
+}
+
+.skill-logo img {
+  transition: transform 0.2s;
+}
+
+.skill-logo:hover img {
+  transform: scale(1.12) rotate(-7deg);
+  box-shadow: 0 6px 22px #6bb6e7a5;
+}
+
+.skill-info {
+  display: none;
+  position: absolute;
+  bottom: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #39405a;
+  color: #fff;
+  font-size: 1.12em;
+  padding: 12px 26px;
+  border-radius: 14px;
+  white-space: nowrap;
+  box-shadow: 0 4px 18px #26315935;
+  z-index: 10;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.22s;
+  pointer-events: none;
+}
+
+.skill-logo:hover .skill-info {
+  display: block;
+  opacity: 1;
+}
+
+footer {
+  margin-top: 60px;
+  background: #263159;
+  color: #fff;
+  text-align: center;
+  padding: 20px 12px;
+  border-radius: 0 0 20px 20px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -4px 24px #6bb6e72c;
+  animation: fadeInL 2s cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 12px;
+    border-radius: 0;
+  }
+  .skills-logos {
+    gap: 13px;
+  }
+  .skill-logo {
+    width: 60px;
+    height: 60px;
+  }
+}
