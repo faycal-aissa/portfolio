@@ -2,32 +2,108 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Projets - Fayçal AISSA</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets - AISSA Fayçal</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    .project-grid {
+    body {
+      background: radial-gradient(circle at top left, #0b1c33, #07111f);
+      color: #dce7ff;
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+    }
+
+    .container-projets {
+      max-width: 900px;
+      margin: 50px auto;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 18px;
+      box-shadow: 0 6px 32px #00000050;
+      padding: 40px 28px;
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.3em;
+      color: #00aaff;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #9bb4ff;
+      font-size: 1.1em;
+      margin-bottom: 40px;
+    }
+
+    .project-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      margin-top: 20px;
+      gap: 30px;
     }
+
     .project-card {
-      background: #1b263b;
+      background: rgba(0, 40, 80, 0.6);
       border-radius: 14px;
-      padding: 20px;
-      border: 2px solid transparent;
-      transition: all 0.3s ease;
-      cursor: pointer;
+      padding: 24px 22px;
+      box-shadow: 0 4px 15px #00000040;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
+
     .project-card:hover {
-      transform: scale(1.04);
-      border-color: var(--accent);
-      box-shadow: 0 6px 20px rgba(0,180,216,0.3);
+      transform: scale(1.03);
+      box-shadow: 0 6px 25px #0099ff33;
     }
-    .project-card h2 { color: var(--accent-alt); margin-bottom: 10px; }
-    .project-card p { color: var(--text-muted); line-height: 1.5; }
+
+    .project-card h2 {
+      color: #4cc9ff;
+      font-size: 1.3em;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .project-card p {
+      color: #e0ecff;
+      line-height: 1.6;
+      text-align: center;
+      font-size: 1em;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #00aaff, #0055ff);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.2s;
+      margin-top: 12px;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #0077cc, #0044aa);
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 15px 10px;
+      background: #0b1c33;
+      color: #b0c4ff;
+      border-top: 1px solid #0044aa;
+    }
   </style>
 </head>
+
 <body>
   <nav class="navbar">
     <a href="index.html">Accueil</a>
@@ -39,34 +115,50 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <main class="container">
-    <h1>🛠️ Mes projets</h1>
+  <main>
+    <section class="container-projets">
+      <h1>🛠️ Mes Projets</h1>
+      <p class="subtitle">
+        Voici une sélection de mes projets réalisés dans le cadre du BTS SIO SISR.  
+        Cliquez sur un projet pour découvrir le dossier complet.
+      </p>
 
-    <div class="project-grid">
-      <div class="project-card" onclick="window.open('pdf/PROJET REV.pdf','_blank')">
-        <h2>📡 Infrastructure VLAN & GLPI (Projet REV)</h2>
-        <p>
-          Conception d’un réseau VLAN avec services DNS, DHCP et routage.  
-          Déploiement d’un serveur GLPI pour la gestion du parc et la supervision du réseau.
-        </p>
-      </div>
+      <div class="project-list">
 
-      <div class="project-card">
-        <h2>🧩 Projet 2 – (à venir)</h2>
-        <p>
-          Ce projet présentera une infrastructure haute disponibilité sous Linux avec HAProxy et clustering.
-        </p>
-      </div>
+        <!-- Projet 1 -->
+        <div class="project-card">
+          <h2>📡 Infrastructure VLAN & GLPI (Projet REV)</h2>
+          <p>
+            Conception d’une infrastructure réseau complète : VLAN, DNS, DHCP, routage et firewall.  
+            Déploiement d’un serveur GLPI pour la gestion du parc informatique et la supervision des postes clients.
+          </p>
+          <a class="btn" href="pdf/PROJET_REV.pdf" target="_blank">📄 Voir le projet</a>
+        </div>
 
-      <div class="project-card">
-        <h2>🌐 Projet 3 – (à venir)</h2>
-        <p>
-          Ce projet détaillera la configuration d’un Active Directory et la gestion de GPO sur Windows Server.
-        </p>
+        <!-- Projet 2 -->
+        <div class="project-card">
+          <h2>🧩 Projet 2 – à venir</h2>
+          <p>
+            Ce projet sera prochainement ajouté : mise en place d’un cluster Linux haute disponibilité (Pacemaker, HAProxy).
+          </p>
+          <a class="btn" href="#" style="pointer-events: none; opacity: 0.5;">🚧 En développement</a>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="project-card">
+          <h2>💼 Projet 3 – à venir</h2>
+          <p>
+            Ce projet portera sur la configuration d’un domaine Active Directory et la gestion des stratégies de groupe (GPO).
+          </p>
+          <a class="btn" href="#" style="pointer-events: none; opacity: 0.5;">🚧 En développement</a>
+        </div>
+
       </div>
-    </div>
+    </section>
   </main>
 
-  <footer>&copy; 2025 Fayçal AISSA | Portfolio BTS SIO SISR</footer>
+  <footer>
+    &copy; 2025 AISSA Fayçal | Portfolio BTS SIO SISR
+  </footer>
 </body>
 </html>
