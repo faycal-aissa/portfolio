@@ -15,7 +15,7 @@
     }
 
     .container-projets {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 50px auto;
       background: rgba(255, 255, 255, 0.05);
       border-radius: 18px;
@@ -32,56 +32,66 @@
 
     h1 {
       text-align: center;
-      font-size: 2.3em;
+      font-size: 2.5em;
       color: #00aaff;
-      margin-bottom: 10px;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
     }
 
-    h2.section-title {
-      color: #ffaa00;
-      border-bottom: 2px solid #ffaa00;
-      padding-bottom: 5px;
-      margin-top: 50px;
+    .section-header {
+      display: flex;
+      align-items: center;
+      margin-top: 60px;
       margin-bottom: 30px;
+    }
+
+    .section-title {
+      color: #ffaa00;
       font-size: 1.8em;
       text-transform: uppercase;
       letter-spacing: 2px;
+      white-space: nowrap;
+      margin-right: 20px;
     }
 
-    .subtitle {
-      text-align: center;
-      color: #9bb4ff;
-      font-size: 1.1em;
-      margin-bottom: 40px;
+    .section-line {
+      flex-grow: 1;
+      height: 2px;
+      background: linear-gradient(90deg, #ffaa00, transparent);
     }
 
     .project-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
     }
 
     .project-card {
       background: rgba(0, 40, 80, 0.6);
       border-radius: 14px;
-      padding: 24px 22px;
+      padding: 24px;
       box-shadow: 0 4px 15px #00000040;
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: transform 0.3s, box-shadow 0.3s;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      border: 1px solid rgba(0, 170, 255, 0.1);
     }
 
     .project-card:hover {
-      transform: scale(1.02);
-      box-shadow: 0 6px 25px #0099ff33;
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px #0099ff44;
+      border-color: rgba(0, 170, 255, 0.4);
     }
 
     .project-card h3 {
       color: #4cc9ff;
-      font-size: 1.3em;
-      margin-bottom: 10px;
-      text-align: center;
+      font-size: 1.25em;
+      margin-top: 0;
+      margin-bottom: 12px;
+      min-height: 3em;
+      display: flex;
+      align-items: center;
     }
 
     .project-card p {
@@ -89,39 +99,42 @@
       line-height: 1.6;
       font-size: 0.95em;
       text-align: justify;
-      margin-bottom: 15px;
+      flex-grow: 1;
+      margin-bottom: 20px;
     }
 
     .btn {
       display: block;
       background: linear-gradient(90deg, #00aaff, #0055ff);
       color: white;
-      padding: 10px 20px;
+      padding: 10px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      transition: background 0.3s, transform 0.2s;
+      transition: opacity 0.3s, transform 0.2s;
       text-align: center;
     }
 
     .btn:hover {
-      background: linear-gradient(90deg, #0077cc, #0044aa);
-      transform: scale(1.05);
+      opacity: 0.9;
+      transform: scale(1.02);
     }
+
+    .tag-stage1 { border-left: 4px solid #00ff88; }
+    .tag-stage2 { border-left: 4px solid #ffaa00; }
+    .tag-cours { border-left: 4px solid #00aaff; }
 
     footer {
       text-align: center;
-      margin-top: 40px;
-      padding: 15px 10px;
+      margin-top: 60px;
+      padding: 20px;
       background: #0b1c33;
       color: #b0c4ff;
       border-top: 1px solid #0044aa;
     }
 
-    @media (max-width: 600px) {
-      .project-list {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 768px) {
+      .project-list { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -141,65 +154,76 @@
   <main>
     <section class="container-projets">
       <h1>🛠️ Mes Réalisations</h1>
-      <p class="subtitle">
-        Découvrez l'ensemble de mes travaux techniques, classés par contexte de réalisation.
-      </p>
 
-      <h2 class="section-title">🏢 Projets en Entreprise (IES - CNRS)</h2>
+      <div class="section-header">
+        <h2 class="section-title">Stage 2ème Année | IES - CNRS</h2>
+        <div class="section-line"></div>
+      </div>
       <div class="project-list">
-        
-        <div class="project-card">
+        <div class="project-card tag-stage2">
           <h3>🚀 Migration GLPI 11 & ZRR</h3>
-          <p>
-            Pilotage de la montée de version de GLPI (v10 vers v11) pour le pôle informatique. Personnalisation avancée de l'interface et création de gabarits de tickets spécifiques pour répondre aux contraintes de la Zone à Régime Restrictif (ZRR) du laboratoire.
-          </p>
-          <a class="btn" href="pdf/maj_glpi.pdf" target="_blank">📄 Documentation Technique</a>
+          <p>Migration complète de l'outil ITSM du laboratoire. Gestion des sauvegardes MariaDB, personnalisation de l'interface et création de gabarits de tickets adaptés aux contraintes de sécurité (ZRR).</p>
+          <a class="btn" href="pdf/maj_glpi.pdf" target="_blank">📄 Voir la documentation</a>
         </div>
-
-        <div class="project-card">
-          <h3>🔍 Audit Réseau & Analyse de Trafic</h3>
-          <p>
-            Analyse approfondie des flux réseau via Wireshark. Identification de protocoles obsolètes (LLMNR/NBNS), résolution de conflits Spanning Tree (STP) et cartographie des caméras Hikvision isolées sur le réseau.
-          </p>
-          <a class="btn" href="pdf/rapport_reseau.pdf" target="_blank">📄 Voir le Rapport d'Audit</a>
+        <div class="project-card tag-stage2">
+          <h3>🔍 Audit Réseau & Wireshark</h3>
+          <p>Analyse des trames réseau pour identifier les protocoles vulnérables (LLMNR/NBNS), diagnostic de boucles STP et cartographie des caméras IP isolées pour la sécurité périmétrale.</p>
+          <a class="btn" href="pdf/rapport_reseau.pdf" target="_blank">📄 Voir le rapport d'audit</a>
         </div>
-
-        <div class="project-card">
-          <h3>🛡️ SIEM Wazuh & Centralisation de Logs</h3>
-          <p>
-            Mise en place d'une architecture de centralisation de logs. Configuration des serveurs Web Apache pour transmettre les logs système vers un serveur SIEM Wazuh via rsyslog, permettant une détection proactive d'incidents de sécurité.
-          </p>
-          <a class="btn" href="pdf/customlog_apache.pdf" target="_blank">📄 Fiche d'Intégration</a>
+        <div class="project-card tag-stage2">
+          <h3>🛡️ SIEM Wazuh & Logs Apache</h3>
+          <p>Mise en place d'une solution de détection d'intrusions. Centralisation des logs d'accès et d'erreurs des serveurs Web vers un collecteur Wazuh via rsyslog.</p>
+          <a class="btn" href="pdf/customlog_apache.pdf" target="_blank">📄 Fiche technique</a>
+        </div>
+        <div class="project-card tag-stage2">
+          <h3>📊 Supervision & Métrologie</h3>
+          <p>Déploiement de Zabbix et LibreNMS pour le monitoring SNMP des équipements actifs. Intégration de Matomo pour l'analyse d'audience des services internes (ownCloud).</p>
+          <a class="btn" href="pdf/items_zabbix.pdf" target="_blank">📄 Guide de supervision</a>
         </div>
       </div>
 
-      <h2 class="section-title">🏫 Projets de Formation (BTS SIO)</h2>
+      <div class="section-header">
+        <h2 class="section-title">Stage 1ère Année | Phone 2002</h2>
+        <div class="section-line"></div>
+      </div>
       <div class="project-list">
-
-        <div class="project-card">
-          <h3>⚖️ Haute Disponibilité (Cluster Linux)</h3>
-          <p>
-            Mise en œuvre d'un cluster haute disponibilité sous Debian. Utilisation de Corosync/Pacemaker pour la bascule d'IP virtuelle et réplication de bases de données MySQL pour garantir un service Web 24/7.
-          </p>
-          <a class="btn" href="pdf/HA_Web_A1.pdf" target="_blank">📄 Dossier Technique</a>
+        <div class="project-card tag-stage1">
+          <h3>💻 Maintenance Matérielle & OS</h3>
+          <p>Diagnostic et réparation de PC et terminaux mobiles. Réinstallation de systèmes d'exploitation (Windows, Android, iOS) et configuration post-déploiement.</p>
+          <a class="btn" href="pdf/rapport_de_stage_1.pdf" target="_blank">📄 Détails de mission</a>
         </div>
-
-        <div class="project-card">
-          <h3>🏢 Active Directory & Sécurité NTFS</h3>
-          <p>
-            Administration d'un domaine Windows Server. Structuration de l'annuaire (UO, Groupes), mise en place de la méthode AGDLP pour les droits NTFS et déploiement de logiciels via GPO.
-          </p>
-          <a class="btn" href="pdf/AP_AD.pdf" target="_blank">📄 Consulter le TP</a>
+        <div class="project-card tag-stage1">
+          <h3>💾 Gestion & Migration de Données</h3>
+          <p>Mise en œuvre de procédures de sauvegarde sécurisées pour les clients. Migration et transfert de données critiques entre anciens et nouveaux supports de stockage.</p>
+          <a class="btn" href="pdf/rapport_de_stage_1.pdf" target="_blank">📄 Documentation</a>
         </div>
-
-        <div class="project-card">
-          <h3>📊 Supervision Centreon & SNMP</h3>
-          <p>
-            Déploiement d'une plateforme Centreon. Configuration d'agents SNMP sur équipements Cisco et serveurs Linux pour monitorer les ressources critiques (CPU, RAM, Trafic) avec système d'alerting.
-          </p>
-          <a class="btn" href="pdf/TP_supervision_centreon_A1.pdf" target="_blank">📄 Procédure de Supervision</a>
+        <div class="project-card tag-stage1">
+          <h3>🌐 Configuration Réseau Local</h3>
+          <p>Paramétrage de routeurs et points d'accès Wi-Fi pour les clients. Test de connectivité et sécurisation de base des équipements réseau résidentiels.</p>
+          <a class="btn" href="pdf/rapport_de_stage_1.pdf" target="_blank">📄 Voir le TP</a>
         </div>
+      </div>
 
+      <div class="section-header">
+        <h2 class="section-title">Travaux Pratiques & Formation</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="project-list">
+        <div class="project-card tag-cours">
+          <h3>⚖️ Cluster Haute Disponibilité</h3>
+          <p>Mise en place d'un cluster Linux (Corosync/Pacemaker) avec répartition de charge HAProxy et réplication de base de données MySQL.</p>
+          <a class="btn" href="pdf/HA_Web_A1.pdf" target="_blank">📄 Dossier technique</a>
+        </div>
+        <div class="project-card tag-cours">
+          <h3>🏢 Active Directory & GPO</h3>
+          <p>Administration d'un domaine Windows Server. Gestion des droits NTFS via la méthode AGDLP et automatisation du parc informatique par stratégies de groupe.</p>
+          <a class="btn" href="pdf/AP_AD.pdf" target="_blank">📄 Voir la configuration</a>
+        </div>
+        <div class="project-card tag-cours">
+          <h3>🔀 Routage Dynamique OSPF</h3>
+          <p>Configuration de routeurs Cisco/Arista pour le routage dynamique en zone unique. Mise en œuvre de la redondance de passerelle via HSRP/VRRP.</p>
+          <a class="btn" href="pdf/TP_Etude_OSPF.pdf" target="_blank">📄 Schéma & Config</a>
+        </div>
       </div>
     </section>
   </main>
