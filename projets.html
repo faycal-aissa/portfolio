@@ -15,7 +15,7 @@
     }
 
     .container-projets {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 50px auto;
       background: rgba(255, 255, 255, 0.05);
       border-radius: 18px;
@@ -37,6 +37,17 @@
       margin-bottom: 10px;
     }
 
+    h2.section-title {
+      color: #ffaa00;
+      border-bottom: 2px solid #ffaa00;
+      padding-bottom: 5px;
+      margin-top: 50px;
+      margin-bottom: 30px;
+      font-size: 1.8em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
     .subtitle {
       text-align: center;
       color: #9bb4ff;
@@ -46,6 +57,7 @@
 
     .project-list {
       display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
       gap: 30px;
     }
 
@@ -55,30 +67,33 @@
       padding: 24px 22px;
       box-shadow: 0 4px 15px #00000040;
       transition: transform 0.2s, box-shadow 0.2s;
-      text-align: center; /* Ajouté pour centrer le contenu comme demandé dans ton CSS d'origine */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .project-card:hover {
-      transform: scale(1.03);
+      transform: scale(1.02);
       box-shadow: 0 6px 25px #0099ff33;
     }
 
-    .project-card h2 {
+    .project-card h3 {
       color: #4cc9ff;
       font-size: 1.3em;
       margin-bottom: 10px;
+      text-align: center;
     }
 
     .project-card p {
       color: #e0ecff;
       line-height: 1.6;
-      font-size: 1em;
-      text-align: justify; /* Justifié pour une lecture plus professionnelle */
+      font-size: 0.95em;
+      text-align: justify;
       margin-bottom: 15px;
     }
 
     .btn {
-      display: inline-block;
+      display: block;
       background: linear-gradient(90deg, #00aaff, #0055ff);
       color: white;
       padding: 10px 20px;
@@ -86,7 +101,7 @@
       text-decoration: none;
       font-weight: 600;
       transition: background 0.3s, transform 0.2s;
-      margin-top: 12px;
+      text-align: center;
     }
 
     .btn:hover {
@@ -101,6 +116,12 @@
       background: #0b1c33;
       color: #b0c4ff;
       border-top: 1px solid #0044aa;
+    }
+
+    @media (max-width: 600px) {
+      .project-list {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -119,44 +140,64 @@
 
   <main>
     <section class="container-projets">
-      <h1>🛠️ Mes Projets de Formation</h1>
+      <h1>🛠️ Mes Réalisations</h1>
       <p class="subtitle">
-        Voici une sélection des projets d'infrastructure réalisés dans le cadre de mon BTS SIO SISR.  
-        Cliquez sur un projet pour consulter les documentations techniques associées.
+        Découvrez l'ensemble de mes travaux techniques, classés par contexte de réalisation.
       </p>
 
+      <h2 class="section-title">🏢 Projets en Entreprise (IES - CNRS)</h2>
+      <div class="project-list">
+        
+        <div class="project-card">
+          <h3>🚀 Migration GLPI 11 & ZRR</h3>
+          <p>
+            Pilotage de la montée de version de GLPI (v10 vers v11) pour le pôle informatique. Personnalisation avancée de l'interface et création de gabarits de tickets spécifiques pour répondre aux contraintes de la Zone à Régime Restrictif (ZRR) du laboratoire.
+          </p>
+          <a class="btn" href="pdf/maj_glpi.pdf" target="_blank">📄 Documentation Technique</a>
+        </div>
+
+        <div class="project-card">
+          <h3>🔍 Audit Réseau & Analyse de Trafic</h3>
+          <p>
+            Analyse approfondie des flux réseau via Wireshark. Identification de protocoles obsolètes (LLMNR/NBNS), résolution de conflits Spanning Tree (STP) et cartographie des caméras Hikvision isolées sur le réseau.
+          </p>
+          <a class="btn" href="pdf/rapport_reseau.pdf" target="_blank">📄 Voir le Rapport d'Audit</a>
+        </div>
+
+        <div class="project-card">
+          <h3>🛡️ SIEM Wazuh & Centralisation de Logs</h3>
+          <p>
+            Mise en place d'une architecture de centralisation de logs. Configuration des serveurs Web Apache pour transmettre les logs système vers un serveur SIEM Wazuh via rsyslog, permettant une détection proactive d'incidents de sécurité.
+          </p>
+          <a class="btn" href="pdf/customlog_apache.pdf" target="_blank">📄 Fiche d'Intégration</a>
+        </div>
+      </div>
+
+      <h2 class="section-title">🏫 Projets de Formation (BTS SIO)</h2>
       <div class="project-list">
 
         <div class="project-card">
-          <h2>📡 Infrastructure VLAN & Routage</h2>
+          <h3>⚖️ Haute Disponibilité (Cluster Linux)</h3>
           <p>
-            Conception d’une architecture réseau segmentée avec configuration du routage inter-VLAN. Mise en place de protocoles de redondance de passerelle (HSRP/VRRP) et de routage dynamique (OSPF) pour assurer la tolérance aux pannes.
+            Mise en œuvre d'un cluster haute disponibilité sous Debian. Utilisation de Corosync/Pacemaker pour la bascule d'IP virtuelle et réplication de bases de données MySQL pour garantir un service Web 24/7.
           </p>
-          <a class="btn" href="pdf/TP_Etude_OSPF.pdf" target="_blank">📄 Voir la documentation</a>
+          <a class="btn" href="pdf/HA_Web_A1.pdf" target="_blank">📄 Dossier Technique</a>
         </div>
 
         <div class="project-card">
-          <h2>⚖️ Haute Disponibilité & Load Balancing Web</h2>
+          <h3>🏢 Active Directory & Sécurité NTFS</h3>
           <p>
-            Déploiement d'un cluster Linux garantissant la continuité de service. Configuration de Corosync et Pacemaker pour le basculement d'IP virtuelle (Failover), répartition de charge via HAProxy, et réplication de bases de données MySQL en architecture Maître/Esclave.
+            Administration d'un domaine Windows Server. Structuration de l'annuaire (UO, Groupes), mise en place de la méthode AGDLP pour les droits NTFS et déploiement de logiciels via GPO.
           </p>
-          <a class="btn" href="pdf/HA_Web_A1.pdf" target="_blank">📄 Voir le dossier</a>
+          <a class="btn" href="pdf/AP_AD.pdf" target="_blank">📄 Consulter le TP</a>
         </div>
 
         <div class="project-card">
-          <h2>🏢 Administration Active Directory & GPO</h2>
+          <h3>📊 Supervision Centreon & SNMP</h3>
           <p>
-            Déploiement et sécurisation d'un environnement Microsoft Windows Server. Création d'une arborescence Active Directory complète, gestion des droits d'accès aux serveurs de fichiers (méthode AGDLP) et automatisation du parc via le déploiement de stratégies de groupe (GPO).
+            Déploiement d'une plateforme Centreon. Configuration d'agents SNMP sur équipements Cisco et serveurs Linux pour monitorer les ressources critiques (CPU, RAM, Trafic) avec système d'alerting.
           </p>
-          <a class="btn" href="pdf/AP_AD.pdf" target="_blank">📄 Voir la configuration</a>
-        </div>
-
-        <div class="project-card">
-          <h2>📊 Supervision Réseau & Système (Centreon)</h2>
-          <p>
-            Mise en place d'une solution de supervision proactive de l'infrastructure via Centreon. Configuration des remontées d'alertes via le protocole SNMP pour monitorer la santé des serveurs (CPU, RAM, disques) et l'état des équipements d'interconnexion.
-          </p>
-          <a class="btn" href="pdf/TP_supervision_centreon_A1.pdf" target="_blank">📄 Voir les procédures</a>
+          <a class="btn" href="pdf/TP_supervision_centreon_A1.pdf" target="_blank">📄 Procédure de Supervision</a>
         </div>
 
       </div>
