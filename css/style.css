@@ -93,3 +93,12 @@ footer {
   .container { padding: 25px 15px; }
   .navbar { gap: 15px; flex-wrap: wrap; }
 }
+.hero-avatar {
+    width: 150px;           /* Taille de l'image */
+    height: 150px;          /* Doit être identique à la largeur */
+    border-radius: 50%;     /* Rend l'image ronde */
+    object-fit: cover;      /* Évite de déformer la photo */
+    border: 3px solid #00aaff; /* Petit cercle bleu style "cybersécurité" */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
