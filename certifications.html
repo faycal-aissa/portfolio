@@ -6,45 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <style>
+        .certif-section { margin-bottom: 50px; }
         .certif-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 25px;
             justify-content: center;
-            margin: 40px 0;
+            margin: 30px 0;
         }
         .certif-card {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid #00aaff;
             border-radius: 12px;
-            padding: 25px;
-            width: 280px;
+            padding: 20px;
+            width: 260px;
             text-align: center;
             transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
         .certif-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 20px rgba(0, 170, 255, 0.2);
-            background: rgba(255, 255, 255, 0.08);
         }
         .certif-card img {
-            width: 140px;
-            height: 140px;
-            margin-bottom: 20px;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
             object-fit: contain;
         }
-        .certif-card h3 {
-            color: #00aaff;
-            margin-bottom: 10px;
-            font-size: 1.2em;
-        }
-        .certif-card p {
-            font-size: 0.9em;
-            margin-bottom: 20px;
-            opacity: 0.9;
+        .certif-card h3 { font-size: 1.1em; color: #00aaff; margin-bottom: 8px; }
+        .certif-card p { font-size: 0.85em; opacity: 0.8; margin-bottom: 15px; }
+        .vendor-title {
+            border-bottom: 2px solid #00aaff;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -62,30 +57,58 @@
     </nav>
 
     <main class="container">
-        <section class="center" style="margin-top: 50px;">
+        <section class="center">
             <h1>🎓 Mes Certifications Professionnelles</h1>
-            <p>
-                En complément de mon cursus en BTS SIO, je m'engage dans un processus de certification continue 
-                pour valider mes expertises techniques auprès des acteurs majeurs du secteur (Cisco, Microsoft, etc.).
-            </p>
+            <p>Validation de mes compétences techniques auprès des leaders mondiaux de l'infrastructure et de la sécurité.</p>
         </section>
 
-        <div class="certif-grid">
-            <div class="certif-card">
-                <img src="https://images.credly.com/images/83096058-f947-4148-8a8b-3f0449a88805/image.png" alt="Cisco CCST Cybersecurity">
-                <h3>CCST Cybersecurity</h3>
-                <p>Cisco Certified Support Technician</p>
-                <a href="https://www.credly.com" target="_blank" class="btn">Vérifier le badge</a>
+        <section class="certif-section">
+            <h2 class="vendor-title">🛡️ Certifications Fortinet</h2>
+            <div class="certif-grid">
+                <div class="certif-card">
+                    <img src="https://training.fortinet.com/pluginfile.php/1/theme_fortinet/logo/0/fortinet-logo.png" alt="Fortinet">
+                    <h3>Fondamentaux certifiés Cybersécurité</h3>
+                    <p>Expire le 27 oct. 2027</p>
+                    <a href="https://www.credly.com" target="_blank" class="btn">Voir le badge</a>
+                </div>
+                <div class="certif-card">
+                    <img src="https://training.fortinet.com/pluginfile.php/1/theme_fortinet/logo/0/fortinet-logo.png" alt="Fortinet">
+                    <h3>Paysage des menaces 3.0</h3>
+                    <p>Émis le 26 oct. 2025</p>
+                    <a href="https://www.credly.com" target="_blank" class="btn">Voir le badge</a>
+                </div>
+                <div class="certif-card">
+                    <img src="https://training.fortinet.com/pluginfile.php/1/theme_fortinet/logo/0/fortinet-logo.png" alt="Fortinet">
+                    <h3>Intro technique Cybersécurité 3.0</h3>
+                    <p>Fortinet Training Institute</p>
+                    <a href="https://www.credly.com" target="_blank" class="btn">Voir le badge</a>
+                </div>
             </div>
+        </section>
 
-            <div class="certif-card">
-                <img src="https://images.credly.com/images/a379493a-8664-4e43-9844-315f60636f56/image.png" alt="Microsoft Certified: Azure Fundamentals">
-                <h3>Azure Fundamentals</h3>
-                <p>Microsoft Certified: AZ-900</p>
-                <a href="https://www.credly.com" target="_blank" class="btn">Vérifier le badge</a>
+        <section class="certif-section">
+            <h2 class="vendor-title">🌐 Certifications Cisco</h2>
+            <div class="certif-grid">
+                <div class="certif-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png" alt="Cisco">
+                    <h3>Introduction à la cybersécurité</h3>
+                    <p>Émis le 3 nov. 2025</p>
+                    <a href="https://www.credly.com" target="_blank" class="btn">Voir le badge</a>
+                </div>
+                <div class="certif-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png" alt="Cisco">
+                    <h3>Bases du réseau</h3>
+                    <p>Émis le 30 oct. 2025</p>
+                    <a href="https://www.credly.com" target="_blank" class="btn">Voir le badge</a>
+                </div>
+                <div class="certif-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png" alt="Cisco">
+                    <h3>Support réseau et sécurité</h3>
+                    <p>Émis le 29 oct. 2025</p>
+                    <a href="https://www.credly.com" target="_blank" class="btn">Voir le badge</a>
+                </div>
             </div>
-            
-            </div>
+        </section>
     </main>
 
     <footer style="margin-top: 50px; text-align: center; padding: 20px;">
