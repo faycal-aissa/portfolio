@@ -3,51 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <title>Certifications - Fayçal AISSA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <style>
         .certif-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 25px;
             justify-content: center;
-            margin-top: 30px;
+            margin: 40px 0;
         }
         .certif-card {
-            background: rgba(255, 255, 255, 0.05); /* Adapté à ton thème sombre */
+            background: rgba(255, 255, 255, 0.05);
             border: 1px solid #00aaff;
-            border-radius: 10px;
-            padding: 20px;
-            width: 250px;
+            border-radius: 12px;
+            padding: 25px;
+            width: 280px;
             text-align: center;
-            transition: transform 0.3s;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .certif-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 170, 255, 0.2);
+            background: rgba(255, 255, 255, 0.08);
         }
         .certif-card img {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 15px;
+            width: 140px;
+            height: 140px;
+            margin-bottom: 20px;
+            object-fit: contain;
+        }
+        .certif-card h3 {
+            color: #00aaff;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .certif-card p {
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            opacity: 0.9;
         }
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <a href="index.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="parcours.html">Parcours</a>
+        <a href="competences.html">Compétences</a>
+        <a href="projets.html">Projets</a>
+        <a href="stages.html">Stages</a>
+        <a href="certifications.html" class="active">Certifications</a>
+        <a href="veille.html">Veille</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
     <main class="container">
-        <section class="intro-section">
+        <section class="center" style="margin-top: 50px;">
             <h1>🎓 Mes Certifications Professionnelles</h1>
-            <p>Afin de valider mes compétences techniques, j'ai obtenu plusieurs certifications reconnues par les leaders du marché de l'informatique et de la cybersécurité.</p>
+            <p>
+                En complément de mon cursus en BTS SIO, je m'engage dans un processus de certification continue 
+                pour valider mes expertises techniques auprès des acteurs majeurs du secteur (Cisco, Microsoft, etc.).
+            </p>
         </section>
 
         <div class="certif-grid">
             <div class="certif-card">
-                <img src="https://images.credly.com/images/83096058-f947-4148-8a8b-3f0449a88805/image.png" alt="Cisco Certified Support Technician (CCST) Cybersecurity">
+                <img src="https://images.credly.com/images/83096058-f947-4148-8a8b-3f0449a88805/image.png" alt="Cisco CCST Cybersecurity">
                 <h3>CCST Cybersecurity</h3>
-                <p>Cisco</p>
-                <a href="https://www.credly.com/users/ton-nom/badges/ton-id" target="_blank" class="btn">Vérifier le badge</a>
+                <p>Cisco Certified Support Technician</p>
+                <a href="https://www.credly.com" target="_blank" class="btn">Vérifier le badge</a>
             </div>
 
+            <div class="certif-card">
+                <img src="https://images.credly.com/images/a379493a-8664-4e43-9844-315f60636f56/image.png" alt="Microsoft Certified: Azure Fundamentals">
+                <h3>Azure Fundamentals</h3>
+                <p>Microsoft Certified: AZ-900</p>
+                <a href="https://www.credly.com" target="_blank" class="btn">Vérifier le badge</a>
+            </div>
+            
             </div>
     </main>
 
-    </body>
+    <footer style="margin-top: 50px; text-align: center; padding: 20px;">
+        &copy; 2026 Fayçal AISSA | Portfolio BTS SIO SISR
+    </footer>
+</body>
 </html>
