@@ -1,48 +1,38 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veille technologique - Aïssa Fayçal</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <nav class="navbar">
-        <a href="index.html">Accueil</a>
-        <a href="a-propos.html">À propos</a>
-        <a href="parcours.html">Parcours</a>
-        <a href="competences.html">Compétences</a>
-        <a href="projets.html">Projets</a>
-        <a href="stages.html">Stages</a>
-        <a href="certifications.html">certifications</a>
-        <a href="veille.html" class="active">Veille</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <main class="container">
-        <h2>Veille technologique 🔒</h2>
+<!-- Remplace la partie <main> de ton code par celle-ci -->
+<main class="container">
+    <section class="intro-section">
+        <h1>🔒 Veille Technologique & Juridique</h1>
         <p>
-            <b>Thème :</b> Cybersécurité et Administration Systèmes & Réseaux<br>
-            <b>Ressources :</b> Cybermalveillance.gouv.fr, CERT-FR, Zataz, UnderNews, CNIL, LinkedIn, forums spécialisés<br><br>
+            <b>Thématique :</b> Évolution des menaces persistantes (APT) et sécurisation des infrastructures critiques.<br>
+            <b>Méthodologie :</b> Flux RSS (Feedly), Alertes CERT-FR, Veille active sur LinkedIn (Experts Cyber), et podcasts (Le激no-Journal).
         </p>
-        <h3>📌 Sujets suivis</h3>
-        <ul>
-            <li><b>Ransomwares :</b> Fonctionnement, prévention et actualités des attaques par rançongiciels</li>
-            <li><b>Active Directory :</b> Bonnes pratiques de sécurisation et gestion des droits</li>
-            <li><b>Virtualisation et clustering :</b> Haute disponibilité, Pacemaker/Corosync, HAProxy</li>
-            <li><b>Gestion de parc informatique :</b> Solutions GLPI, OCS Inventory, automatisation</li>
-            <li><b>Nouvelles menaces :</b> Vulnérabilités réseau, failles de sécurité, mises à jour critiques</li>
-        </ul>
-        <h3>📰 Article récent</h3>
-        <p>
-            <b>Les ransomwares : fonctionnement, prévention et actualité</b><br>
-            Les attaques par ransomwares sont l'une des principales cybermenaces auxquelles sont aujourd'hui confrontées les entreprises. 
-            Dans ce type d'attaques, les criminels compromettent le réseau de leur victime et déploient un rançongiciel permettant de chiffrer 
-            les fichiers des systèmes compromis, avant de tenter de leur extorquer des rançons. Afin de disposer de moyens de pression complémentaires, 
-            les attaquants menacent également de divulguer des données sensibles exfiltrées en amont du déploiement du rançongiciel.
-        </p>
-    </main>
-    <footer>
-        &copy; 2026 Aïssa Fayçal | Portfolio BTS SIO SISR
-    </footer>
-</body>
-</html>
+    </section>
+
+    <div class="project-list">
+        <!-- Sujet 1 : NIS 2 -->
+        <div class="project-card">
+            <h3>🇪🇺 Directive NIS 2 : Mise en conformité</h3>
+            <p>Suivi de l'application de la directive NIS 2 en France. Cette réglementation impose des standards de sécurité plus stricts aux "entités essentielles" et "importantes".</p>
+            <p><i>💡 À dire au jury : "Je surveille comment les PME s'adaptent à ces obligations, notamment sur la gestion des risques et la sécurisation de la chaîne d'approvisionnement."</i></p>
+        </div>
+
+        <!-- Sujet 2 : IA & Cyber -->
+        <div class="project-card">
+            <h3>🤖 L'IA au service des attaquants (Deepfakes/Vishing)</h3>
+            <p>Veille sur l'utilisation de l'Intelligence Artificielle pour automatiser les attaques par phishing et créer des clones vocaux pour l'arnaque au président.</p>
+            <p><i>💡 À dire au jury : "C'est un sujet que je lie à mon stage à l'IES, car la sensibilisation des utilisateurs est le seul rempart contre ces nouvelles techniques de Social Engineering."</i></p>
+        </div>
+
+        <!-- Sujet 3 : Zero Trust -->
+        <div class="project-card">
+            <h3>🛡️ Architecture Zero Trust</h3>
+            <p>Passage du modèle de sécurité périmétrique à une approche "ne jamais faire confiance, toujours vérifier".</p>
+            <p><i>💡 À dire au jury : "C'est une évolution logique après mon travail sur les zones ZRR : chaque accès doit être authentifié, quel que soit le réseau."</i></p>
+        </div>
+    </div>
+
+    <h3>📰 Actualité marquante (Mai 2026)</h3>
+    <div class="project-card" style="border-left: 5px solid #00aaff;">
+        <p><b>Recrudescence des attaques sur les infrastructures Edge :</b> Observation d'une vague d'exploitations de failles sur les routeurs et équipements IoT industriels. Le CERT-FR recommande une segmentation réseau stricte (VLAN) et un filtrage des flux sortants, des mesures que j'ai pu mettre en pratique lors de mon stage de 2ème année.</p>
+    </div>
+</main>
