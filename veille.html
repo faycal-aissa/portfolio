@@ -1,38 +1,58 @@
-<!-- Remplace la partie <main> de ton code par celle-ci -->
-<main class="container">
-    <section class="intro-section">
-        <h1>🔒 Veille Technologique & Juridique</h1>
-        <p>
-            <b>Thématique :</b> Évolution des menaces persistantes (APT) et sécurisation des infrastructures critiques.<br>
-            <b>Méthodologie :</b> Flux RSS (Feedly), Alertes CERT-FR, Veille active sur LinkedIn (Experts Cyber), et podcasts (Le激no-Journal).
-        </p>
-    </section>
+<nav class="navbar">
+        <a href="index.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="parcours.html">Parcours</a>
+        <a href="competences.html">Compétences</a>
+        <a href="projets.html">Projets</a>
+        <a href="stages.html">Stages</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="veille.html" class="active">Veille</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
-    <div class="project-list">
-        <!-- Sujet 1 : NIS 2 -->
-        <div class="project-card">
-            <h3>🇪🇺 Directive NIS 2 : Mise en conformité</h3>
-            <p>Suivi de l'application de la directive NIS 2 en France. Cette réglementation impose des standards de sécurité plus stricts aux "entités essentielles" et "importantes".</p>
-            <p><i>💡 À dire au jury : "Je surveille comment les PME s'adaptent à ces obligations, notamment sur la gestion des risques et la sécurisation de la chaîne d'approvisionnement."</i></p>
+    <!-- Ajout d'une div "hero" ou "page-header" pour garder le style sombre -->
+    <main class="container">
+        <header class="center" style="margin-top: 50px; margin-bottom: 40px;">
+            <h1 style="color: #00aaff;">🔒 Veille Technologique & Juridique</h1>
+            <p>Méthodologie et suivi des évolutions du secteur IT (Mai 2026)</p>
+        </header>
+
+        <section style="background: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 10px; margin-bottom: 30px; border: 1px solid #333;">
+            <p>
+                <b style="color: #00aaff;">Thématique :</b> Évolution des menaces persistantes et sécurisation des infrastructures.<br>
+                <b style="color: #00aaff;">Outils :</b> Flux RSS (Feedly), Alertes CERT-FR, Cybermalveillance.gouv.fr, LinkedIn.
+            </p>
+        </section>
+
+        <div class="project-list">
+            <!-- Sujet 1 -->
+            <div class="project-card">
+                <h3>🇪🇺 Directive NIS 2</h3>
+                <p>Suivi de la mise en conformité des entreprises françaises face aux nouvelles exigences européennes de cybersécurité.</p>
+                <span class="tag">Réglementation</span>
+            </div>
+
+            <!-- Sujet 2 -->
+            <div class="project-card">
+                <h3>🤖 IA & Ingénierie Sociale</h3>
+                <p>Analyse des risques liés aux Deepfakes et aux attaques par phishing boostées par l'intelligence artificielle.</p>
+                <span class="tag">Menaces</span>
+            </div>
+
+            <!-- Sujet 3 -->
+            <div class="project-card">
+                <h3>🛡️ Modèle Zero Trust</h3>
+                <p>Étude sur l'abandon du périmètre réseau classique au profit d'une vérification systématique de chaque accès.</p>
+                <span class="tag">Architecture</span>
+            </div>
         </div>
 
-        <!-- Sujet 2 : IA & Cyber -->
-        <div class="project-card">
-            <h3>🤖 L'IA au service des attaquants (Deepfakes/Vishing)</h3>
-            <p>Veille sur l'utilisation de l'Intelligence Artificielle pour automatiser les attaques par phishing et créer des clones vocaux pour l'arnaque au président.</p>
-            <p><i>💡 À dire au jury : "C'est un sujet que je lie à mon stage à l'IES, car la sensibilisation des utilisateurs est le seul rempart contre ces nouvelles techniques de Social Engineering."</i></p>
+        <h3 style="margin-top: 40px; color: #00aaff;">📰 Focus Actualité</h3>
+        <div class="project-card" style="border-left: 5px solid #00aaff; width: 100%;">
+            <p><b>Recrudescence des attaques sur les infrastructures Edge :</b> En ce mois de mai 2026, la priorité est portée sur la sécurisation des équipements IoT et des routeurs industriels, souvent cibles de failles "Zero-day". Cette veille appuie l'importance de la segmentation réseau que j'ai pu étudier en stage.</p>
         </div>
+    </main>
 
-        <!-- Sujet 3 : Zero Trust -->
-        <div class="project-card">
-            <h3>🛡️ Architecture Zero Trust</h3>
-            <p>Passage du modèle de sécurité périmétrique à une approche "ne jamais faire confiance, toujours vérifier".</p>
-            <p><i>💡 À dire au jury : "C'est une évolution logique après mon travail sur les zones ZRR : chaque accès doit être authentifié, quel que soit le réseau."</i></p>
-        </div>
-    </div>
-
-    <h3>📰 Actualité marquante (Mai 2026)</h3>
-    <div class="project-card" style="border-left: 5px solid #00aaff;">
-        <p><b>Recrudescence des attaques sur les infrastructures Edge :</b> Observation d'une vague d'exploitations de failles sur les routeurs et équipements IoT industriels. Le CERT-FR recommande une segmentation réseau stricte (VLAN) et un filtrage des flux sortants, des mesures que j'ai pu mettre en pratique lors de mon stage de 2ème année.</p>
-    </div>
-</main>
+    <footer style="margin-top: 50px; text-align: center; padding: 20px; opacity: 0.7;">
+        &copy; 2026 Fayçal AISSA | Portfolio BTS SIO SISR
+    </footer>
