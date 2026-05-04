@@ -1,4 +1,32 @@
-<nav class="navbar">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille technologique - Fayçal AISSA</title>
+    <!-- Vérifie bien que le chemin vers ton CSS est correct -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Petits ajouts spécifiques pour que la veille soit plus lisible avec ton design */
+        .veille-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 0 12px 12px 0;
+        }
+        .tag-cyber {
+            color: var(--accent-alt);
+            font-size: 0.8em;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
         <a href="index.html">Accueil</a>
         <a href="a-propos.html">À propos</a>
         <a href="parcours.html">Parcours</a>
@@ -10,49 +38,40 @@
         <a href="contact.html">Contact</a>
     </nav>
 
-    <!-- Ajout d'une div "hero" ou "page-header" pour garder le style sombre -->
     <main class="container">
-        <header class="center" style="margin-top: 50px; margin-bottom: 40px;">
-            <h1 style="color: #00aaff;">🔒 Veille Technologique & Juridique</h1>
-            <p>Méthodologie et suivi des évolutions du secteur IT (Mai 2026)</p>
-        </header>
+        <h1>Veille Technologique 🔒</h1>
+        
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">
+            <b>Thématique :</b> Évolution des menaces et conformité (Directive NIS 2, IA & Cybersécurité)
+        </p>
 
-        <section style="background: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 10px; margin-bottom: 30px; border: 1px solid #333;">
-            <p>
-                <b style="color: #00aaff;">Thématique :</b> Évolution des menaces persistantes et sécurisation des infrastructures.<br>
-                <b style="color: #00aaff;">Outils :</b> Flux RSS (Feedly), Alertes CERT-FR, Cybermalveillance.gouv.fr, LinkedIn.
-            </p>
-        </section>
-
-        <div class="project-list">
-            <!-- Sujet 1 -->
-            <div class="project-card">
-                <h3>🇪🇺 Directive NIS 2</h3>
-                <p>Suivi de la mise en conformité des entreprises françaises face aux nouvelles exigences européennes de cybersécurité.</p>
-                <span class="tag">Réglementation</span>
-            </div>
-
-            <!-- Sujet 2 -->
-            <div class="project-card">
-                <h3>🤖 IA & Ingénierie Sociale</h3>
-                <p>Analyse des risques liés aux Deepfakes et aux attaques par phishing boostées par l'intelligence artificielle.</p>
-                <span class="tag">Menaces</span>
-            </div>
-
-            <!-- Sujet 3 -->
-            <div class="project-card">
-                <h3>🛡️ Modèle Zero Trust</h3>
-                <p>Étude sur l'abandon du périmètre réseau classique au profit d'une vérification systématique de chaque accès.</p>
-                <span class="tag">Architecture</span>
-            </div>
+        <div class="veille-item">
+            <span class="tag-cyber">Réglementation - Mai 2026</span>
+            <h3>🇪🇺 Directive NIS 2 : L'obligation de sécurité</h3>
+            <p>Suivi de l'application de la directive en France. Elle impose aux entreprises une gestion des risques renforcée et une sécurisation de la chaîne d'approvisionnement.</p>
         </div>
 
-        <h3 style="margin-top: 40px; color: #00aaff;">📰 Focus Actualité</h3>
-        <div class="project-card" style="border-left: 5px solid #00aaff; width: 100%;">
-            <p><b>Recrudescence des attaques sur les infrastructures Edge :</b> En ce mois de mai 2026, la priorité est portée sur la sécurisation des équipements IoT et des routeurs industriels, souvent cibles de failles "Zero-day". Cette veille appuie l'importance de la segmentation réseau que j'ai pu étudier en stage.</p>
+        <div class="veille-item">
+            <span class="tag-cyber">Menaces Emergentes</span>
+            <h3>🤖 IA & Ingénierie Sociale</h3>
+            <p>Veille sur l'utilisation des Deepfakes vocaux pour les attaques de type "Arnaque au Président". Un sujet que je lie directement à la sensibilisation des utilisateurs.</p>
+        </div>
+
+        <div class="veille-item">
+            <span class="tag-cyber">Infrastructure SISR</span>
+            <h3>🛡️ Vers le "Zero Trust" Architecture</h3>
+            <p>Abandon du périmètre réseau classique. Chaque flux doit être authentifié, une logique qui complète mon travail sur les zones ZRR à l'IES.</p>
+        </div>
+
+        <div style="margin-top: 40px; padding: 15px; border: 1px dashed var(--accent-alt); border-radius: 10px;">
+            <p style="font-size: 0.9em; margin: 0;">
+                <b>Sources suivies :</b> CERT-FR (Alertes critiques), Cybermalveillance.gouv.fr, Plateforme LinkedIn (Experts Cyber).
+            </p>
         </div>
     </main>
 
-    <footer style="margin-top: 50px; text-align: center; padding: 20px; opacity: 0.7;">
+    <footer>
         &copy; 2026 Fayçal AISSA | Portfolio BTS SIO SISR
     </footer>
+</body>
+</html>
